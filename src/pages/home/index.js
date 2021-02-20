@@ -1,10 +1,12 @@
 import React from 'react'
-import { SignInBtn } from '../../components'
+import './style.css'
+import { CreatePost, Navbar } from '../../container'
 
 function Home() {
   return (
     <div className="home">
-      <SignInBtn />
+      <Navbar />
+      <CreatePost />
     </div>
   )
 }
