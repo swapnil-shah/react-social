@@ -1,6 +1,4 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -68,3 +66,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Firebase Setup
+
+- Create a web project in firebase and copy the var `firebaseConfig` 
+- Create a file at root `firebase.js`
+- `npm install firebase`
+- Configuration
+
+```
+import firebase from 'firebase'
+var firebaseConfig = {
+  apiKey: "xxxx-xxxxxxxx",
+  ...
+  measurementId: "x-xxx"
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig)//Configured
+const db = firebaseApp.firestore()//Database
+const auth = firebase.auth()
+const storage = firebase.strorage()//Storing the images
+const provider = new firebase.auth.GoogleAuthProvider()//Google Signin
+export { db, auth, storage, provider }
+```
+#### Sign In with Google
+- Create a folder services and then file auth.js
+- 
