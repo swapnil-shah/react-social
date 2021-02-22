@@ -14,7 +14,7 @@ var firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig)//Configured
 const db = firebaseApp.firestore()//Database
 const auth = firebase.auth()
-const storage = firebase.strorage()//Storing the images
+const storage = firebase.storage()//Storing the images
 const provider = new firebase.auth.GoogleAuthProvider()//Google Signin
 
 export { db, auth, storage, provider }
